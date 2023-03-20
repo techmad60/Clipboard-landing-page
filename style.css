@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+/* ||RESET STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+li {
+    list-style-type: none;
+}
+ a {
+    text-decoration: none;
+}
+abbr {
+    text-decoration: none;
+}
+
+button {
+    display:block;
+   
+}
+
+
+
+/* ||VARIABLES*/
+:root {
+    /* FONT STYLES */
+    --FF: 'Bai Jamjuree', sans-serif;
+    --FS: 1.125rem;
+    --FW: 400, 600;
+    --ATTRIBUTION-FS: 0.6875rem;
+    
+    /* MARGIN */
+    --HEADER-PARAGRAPH: 1em auto 2.5em;
+    --H3-MARGIN: 3em auto 0.5em;
+    --PARAGRAPH-MARGIN: 0em auto;
+    --SVG-MARGIN: 0 auto;
+    --LOGO-HEADER-MARGIN: 6em auto 4em;
+    --LOGO-FOOTER-MARGIN: 3em auto;
+    --MAIN-HEADER-MARGIN: 3em auto 0em;
+    --MAIN-HEADER-PARAGRAPH-MARGIN: 0em auto 3em;
+    --MAIN-IMG-MARGIN: 1em auto;
+    --ICON-MARGIN: 3em auto 0em;
+    --SECTION-COMPANY-LOGO-MARGIN: 6em auto;
+    --COMPANY-LOGO-MARGIN: 3em auto 0em;
+    --FOOTER-MARGIN: 6em;
+    --LI-MARGIN: 2em auto;
+
+    
+   /* PADDING */
+    --H2-PADDING: 1em;
+    --PARAGRAPH-PADDING: 0.2em auto;
+    --SOCIAL-ICON-PADDING: 1em;
+    --ATTRIBUTION-PADDING: 2em;
+
+
+    /* COLORS */
+    --HEADER-COLOR:  hsl(210, 10%, 33%);
+    --PARAGRAPH-COLOR: hsl(201, 11%, 66%);
+    --BUTTON-IOS: hsl(171, 66%, 44%);
+    --BUTTON-MAC: hsl(233, 100%, 69%);
+    --BUTTON-TEXT-COLOR: white;
+    --FOOTER-BG: hsl(198, 33%, 94%);
+    --LI-TEXT-COLOR: #333;
+    
+    /* WIDTH */
+    --IMAGE-ONE-MW: 800px;
+    --IMAGE-ONE-W: 90%;
+    --LOGO-FOOTER-W: 50px ;
+
+    /* HEIGHTS*/
+    --BH: 100vh;
+    --LINE-HEIGHT: 1.5;
+
+
+    /* BUTTON STYLES */
+    --BUTTON-WIDTH: 85%;
+    --BUTTON-HEIGHT: 4em;
+    --BORDER-RADIUS: 30PX;
+    --BUTTON-MARGIN: 2em auto;
+    --PADDING: 1em;
+    --BOX-SHADOW-IOS: 1px 2px 0px hsl(171, 70%, 31%);
+    --BOX-SHADOW-MAC: 1px 2px 0px hsl(233, 44%, 56%);
+
+}
+
+/* ||GENERAL STYLES */
+body {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto;
+    text-align: center;
+    font-family: var(--FF);
+    font-size: var(--FS);
+    font-weight: var(--FW);
+    
+    min-height: var(--BH);
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background: url(images/bg-header-mobile.png)  no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+h1, h2, h3 {
+    color: var(--HEADER-COLOR);
+    line-height: var(--LINE-HEIGHT)
+}
+
+h2 {
+    padding: var(--H2-PADDING);
+}
+
+h3 {
+    margin: var(--H3-MARGIN);
+}
+
+p {
+    color: var(--PARAGRAPH-COLOR);
+    padding: var(--PARAGRAPH-PADDING);
+    margin: var(--PARAGRAPH-MARGIN);
+    line-height: 1.5;
+    
+}
+button {
+    border: none;
+    border-radius: var(--BORDER-RADIUS);
+    width: var(--BUTTON-WIDTH);
+    height: var(--BUTTON-HEIGHT);
+    margin: var(--BUTTON-MARGIN)
+    
+}
+button a {
+    color: var(--BUTTON-TEXT-COLOR);
+}
+
+li {
+    margin: var(--LI-MARGIN);
+    
+}
+li a {
+    color: var(--LI-TEXT-COLOR);
+}
+footer {
+    background-color: var(--FOOTER-BG);
+    margin-top: var(--FOOTER-MARGIN);
+}
+
+
+/* ||UTILITY CLASSES */
+
+.main-img {
+    margin: var(--MAIN-IMG-MARGIN);
+}
+.main-h2  {
+    margin: var(--MAIN-HEADER-MARGIN);
+}
+.main-h2-p{
+    margin: var(--MAIN-HEADER-PARAGRAPH-MARGIN);
+}
+.btn-green {
+    background-color: var(--BUTTON-IOS);
+    box-shadow: var(--BOX-SHADOW-IOS);
+}
+.btn-blue {
+    background-color: var(--BUTTON-MAC);
+    box-shadow: var(--BOX-SHADOW-MAC);
+}
+
+/* ||IMAGE STYLES */
+.svg {
+    margin: var(--SVG-MARGIN);
+}
+.icon {
+    margin: var(--ICON-MARGIN);
+}
+.company-logo {
+    margin: var(--COMPANY-LOGO-MARGIN);
+}
+.logo-footer {
+    width: var(--LOGO-FOOTER-W);
+    margin: var(--LOGO-FOOTER-MARGIN);
+}
+.image-one {
+    max-width: var(--IMAGE-ONE-MW);
+    width: var(--IMAGE-ONE-W);
+    height: auto;
+}
+
+/* ||BOX MODEL PROPERTIES FOR ELEMENTS */
+.logo-header {
+    margin: var(--LOGO-HEADER-MARGIN);
+}
+.header-p {
+    margin: var(--HEADER-PARAGRAPH);
+}
+
+.section-company-logo {
+    margin: var(--SECTION-COMPANY-LOGO-MARGIN);
+}
+
+.social-icon {
+    padding: var(--SOCIAL-ICON-PADDING);
+}
+/* ||ATTRIBUTION */
+.attribution { 
+    font-size: var(--ATTRIBUTION-FS);
+    padding: var(--ATTRIBUTION-PADDING);
+}
+.attribution a { 
+    color: var(--BUTTON-IOS);
+ }
+
+/* ||LAYOUTS */
+.section-social-icon{
+    display: flex;
+    justify-content: center;
+}
+.social-icon:hover {
+    color: var(--BUTTON-IOS);
+}
+@media only screen and
+(min-width: 576px) {
+    
+    header {
+        background-image: url(images/bg-header-desktop.png);
+    }
+}
+
+@media only screen and
+(min-width: 768px) {
+    p {
+        width: 60%;
+    }
+
+}
+@media only screen and 
+(min-width: 992px) {
+    button {
+        display: inline;
+        width: 30%;
+        margin: 1em;
+    }
+} 
+
+@media only screen and
+(min-width: 1200px) {
+
+    /* ||GENERAL STYLES */
+    p {
+        width: 46%;
+    }
+
+    
+    /* ||BUTTON STYLES */
+    button {
+        margin: 0.5em;
+        width: 15%;
+    }
+
+    /* ||MAIN STYLES */
+    .main-h2-p {
+        width: 46%;
+    }
+    .div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        text-align: start;
+        line-height: 1.5;
+    }
+    
+    /* ||SECTION ONE */
+    .image-one {
+        margin-left: -2em;
+    }
+    .section-services {
+        width: 70%;
+    }
+    
+    .section-services h3 {
+       text-align: start;
+    }
+    .section-services p {
+        width: 100%;
+        text-align: start;
+    }
+
+    /* ||SECTION TWO */
+    .section-services-two {
+       display: grid;
+       grid-template-columns: auto auto auto;
+    }
+
+    .section-services-two p {
+        width: 90%;
+    
+    }
+    .section-blacklist {
+        margin-top: -10px;
+
+    }
+    
+    .section-company-logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* FOOTER STYLES */
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        place-content: center;
+
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+        line-height: normal;
+        flex-wrap: wrap;
+        text-align: start;
+        margin: 1em;
+    }
+    .section-social-icon {
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2em;
+    }
+    .logo-footer {
+        justify-content: flex-start;
+        width: 70px;
+        
+    }
+
+   
+}
+
